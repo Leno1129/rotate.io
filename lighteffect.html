@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>light effect</title>
+        <style>
+            *
+            {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+                display: flex;
+                justify-items: center;
+                align-items: center;
+                min-height: 120vh;
+                background: rgb(250, 240, 240);
+               
+               
+            }
+            .gg{
+                width: 100%;
+                height: 500px;
+                margin: 0 auto;
+               
+            }
+            .cub{
+                position: relative;
+                width: 300PX;
+                height: 300px;
+                transform-style: preserve-3d;
+                animation: animate 10s linear infinite;
+                  margin: 0 auto;
+            }
+             
+            
+                
+            @keyframes animate{
+                0%
+                {
+                    transform: rotateX(-30deg) rotateY(0deg);
+                }
+                100%{
+                    transform: rotateX(-30deg) rotateY(360deg);
+                }
+        
+              }
+              .cub div{   position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transform-style: preserve-3d;
+            }
+            .cub div span{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(black,cyan);
+                transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
+            }
+            .top{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 300px;
+                height: 300px;
+                background: rgb(253, 241, 241);
+                transform: rotateX(90deg) translateZ(150px);
+            }
+            .top::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 300px;
+                height: 300px;
+                background:rgb(14, 15, 15);
+                transform: translateZ(-420px);
+                filter: blur(20px);
+                box-shadow: 0 0 120px rgba(0, 225,0, 0.2),
+                0 0 200px rgba(0, 225,0, 0.4),
+                0 0 300px rgba(0, 225,0, 0.6),
+                0 0 400px rgba(0, 225,0, 0.8),
+                0 0 500px rgba(0, 225,0, 1),
+                ;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="gg">
+        <div class="cub ">
+            <div class="top"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxNTwltT_kqfQYsCE-xTBGkT03Y_S4WFZwag&usqp=CAU" alt="" width="300px" height="300px"></div>
+        <div>
+            <span style="--i:0;">
+            <img src="https://img.rawpixel.com/private/static/images/website/2022-05/px142077-image-kwvvvktc.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=0cfd8aa6e66ad55612f900d479a9d0de" alt="" width="300px" height="300px"></span>
+            <span style="--i:1;"> <img src="https://avatars.mds.yandex.net/i?id=84dbd50839c3d640ebfc0de20994c30d-4473719-images-taas-consumers&n=27&h=480&w=480" alt="" width="300px" height="300px"></span>
+            <span style="--i:2;">
+            <img src="https://tinypng.com/images/social/website.jpg" alt="" width="300px" height="300px"></span>
+            <span style="--i:3;"><img src="https://d38b044pevnwc9.cloudfront.net/cutout-nuxt/enhancer/2.jpg" alt=""  width="300px" height="300px"></span>
+        </div>
+    </div></div>
+    
+    </body>
+</html>
